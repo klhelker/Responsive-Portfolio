@@ -7,10 +7,7 @@ body {
     background-image: url("../assets/images/concrete_seamless.png");
   }
   
-  * {
-    box-sizing: border-box;
-    margin: 0;
-  }
+ 
   
   /* sticky footer styling */
   
@@ -200,7 +197,12 @@ body {
     border: 1px solid #ddd;
   }
   
-  /* contact page */
+  .clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+    
+  }
   
   #contact-form ul {
     margin-bottom: 20px;
@@ -239,20 +241,28 @@ body {
     background: #4aaaa5;
     border: 0 none;
   }
-  
-  @media screen and (max-width: 980px){
+
+  @media screen and (max-width: 980px)
+
+  {  
+            
+    .img {
+      width: 40%;
+      }
 
     .container {
+    
         display: flex;
-        flex-direction: column
-    }
+        flex-direction: row;
+      }
+    
     #logo {
 
         width: 100%
     }
 
     .main-section {
-        width: auto;
+        width: 70%;
         padding: 30px;
         padding-top: 20px;
     }
@@ -260,18 +270,29 @@ body {
     #main-container {
         padding: 170px 20px 20px 20px;
         }
-    .auth-image {width: 90%;}
-          }
-
-  
-
-  @media screen and (max-width: 768px){
     
-   
+        .auth-image {width: 90%;}
+  
+    .work h3 {
+    position: absolute;
+    background-color: #4aaaa5;
+    width: 100%;
+    color: white;
+    bottom: 25px;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+        }
+      
+ 
+
+      }
+    
+  @media screen and (max-width: 768px){
     
     .container {
         display: flex;
-        flex-direction: column
+        flex-direction: row;
     }
     #logo {
 
@@ -283,32 +304,35 @@ body {
         padding: 30px;
         padding-top: 20px;
     }
-    .work h3{
-        position: absolute;
-        background-color: #4aaaa5;
-        width: 100%;
-        color: white;
-        bottom: 25px;
-        text-align: center;
-        margin: auto;
-        padding: 10px;
-    }
+   
 
     #main-container {
         padding: 170px 20px 20px 20px;
         }
     .auth-image {width: 90%;}
           
-    .work {
-        position: relative;
-    }
+    
+    .work h3{
+      position: absolute;
+      background-color: #4aaaa5;
+      width: 100%;
+      color: white;
+      bottom: 25px;
+      text-align: center;
+      margin: auto;
+      padding: 10px;
+  }
     img {width: 100%}
+    
+    .work {
+      position: relative;
+  }
 }
   @media screen and (max-width: 640px){
 
     .container {
         display: flex;
-        flex-direction: column
+        flex-direction: row;
     }
     #logo {
 
@@ -331,7 +355,7 @@ body {
         background-color: #4aaaa5;
         width: 100%;
         color: white;
-        bottom: 10px;
+        bottom: 20px;
         text-align: center;
     }
 
